@@ -58,46 +58,39 @@ function runGame(x) {
   gamesPlayed++;
   // increments the global variable declared outside this function
 
-
-  let flip = document.getElementById('flip');
-  // stores an element to output the result of the flip
-
-  let result = document.getElementById('result');
-  // stores an element to output the result of the toss
-
-  let gameCount = document.getElementById('count');
-  // stores an element to output the number of games played
-
-  let winCount = document.getElementById('wins');
-  // stores an element to output the number of games won
-  
-  let lossCount = document.getElementById('losses');
-  // stores an element to output the number of games lost
-
   let prediction = document.getElementById('prediction');
   // creates a variable and sets it to the element to hold the predicted choice 
   prediction.innerText = choiceResult; 
   // outputs 'heads' or 'tails'
 
+  let flip = document.getElementById('flip');
+  // stores an element to output the result of the flip
   flip.innerText = flipResult; 
   // also outputs 'heads' or 'tails'
 
+  let result = document.getElementById('result');
+  // stores an element to output the result of the toss
   result.innerText = gameResult;
   // outputs 'win' or 'loss'
 
+  let gameCount = document.getElementById('count');
+  // stores an element to output the number of games played
   gameCount.innerText = gamesPlayed;
   // outputs # of games played (incremented when the function runs)
 
+  let winCount = document.getElementById('wins');
+  // stores an element to output the number of games won
   winCount.innerText = gamesWon;
   // outputs # of games played (incremented when the function runs)
-
+  
+  let lossCount = document.getElementById('losses');
+  // stores an element to output the number of games lost
   lossCount.innerText = gamesLost;
   // outputs # of games played (incremented when the function runs)
 }
 
-// reset logic, for a function called resetScore()
-// 10. reset/clear the results from the scoreboard
-
+// a function called resetScore() to clear the scoreboard
+// triggered by html onclick event
 function resetScore() {
   gamesPlayed = 0;
   gamesWon = 0;

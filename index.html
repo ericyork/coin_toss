@@ -10,10 +10,8 @@
 </head>
 <body>
   <main>
-    <h1>Coin Flip Game</h1>
-    <hr>
+    <h1>Flip a Coin</h1>
     <section id="choice">
-      <h2>Pick a Side</h2>
       <button id="heads" onclick="runGame('heads')">
         <img src="svg/coin-head.svg" alt="heads">
       </button>
@@ -21,18 +19,20 @@
         <img src="svg/coin-tail.svg" alt="tails">
       </button>
     </section>
-    <section id="output">
-      <h2>Game Result</h2>
-      <p>You predicted <span id="prediction"> </span>.</p>
-      <p>The flip came up <span id="flip"> </span>.</p>
-      <p>That's a <span id="result"> </span>.</p>
-    </section>
-    <section id="storage">
-      <h2>Score Board</h2>
-      <p>You've played <span id="count">0</span> games.</p>
-      <p>You have <span id="wins">0</span> wins and <span id="losses">0</span> losses.</p>
-      <button onclick="resetScore()" id="reset">Reset Score</button>
-    </section>
+    <div class="flex">
+      <section id="output">
+        <h2>Game Result</h2>
+        <p>You predicted <span id="prediction"> </span>.</p>
+        <p>The flip came up <span id="flip"> </span>.</p>
+        <p>That's a <span id="result"> </span>.</p>
+      </section>
+      <section id="storage">
+        <h2>Score Board</h2>
+        <p>You've played <span id="count">0</span> games.</p>
+        <p>You have <span id="wins">0</span> wins and <span id="losses">0</span> losses.</p>
+        <button onclick="resetScore()" id="reset">Reset Score</button>
+      </section>
+    </div>
   </main>
   <script src="js/logic.js"></script>
 </body>
